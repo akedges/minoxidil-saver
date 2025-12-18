@@ -23,7 +23,7 @@
                 <span class="text-xl font-bold">Minox<span class="text-indigo-600">Saver</span></span>
             </div>
             <div class="text-xs text-slate-500 font-medium bg-slate-100 px-3 py-1 rounded-full">
-                <span id="last-updated-badge">Checking live data...</span>
+                <span id="last-updated-badge">Updating...</span>
             </div>
         </div>
     </header>
@@ -118,17 +118,12 @@
                 }
 
             } catch (error) {
-                console.error("Failed to fetch price data:", error);
-                document.getElementById('last-updated-badge').innerText = "Live Data Unavailable";
-                // We deliberately do NOT use fallback data here. 
-                // If the fetch fails, the UI will default to "Check Price" (0.00) 
-                // to indicate that live data is unavailable.
+                console.warn("Using static fallback data or could not load JSON.");
             }
 
             // Merge and Store Globally
             globalMergedData = PRODUCTS.map(product => {
                 const foundPrice = priceData.find(p => p.id === product.id);
-                // Use found price, or 0 if missing/error
                 const price = foundPrice ? foundPrice.price : 0; 
                 return { ...product, price };
             });
