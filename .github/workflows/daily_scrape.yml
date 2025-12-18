@@ -1,6 +1,9 @@
 name: Daily Price Scrape
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # Run at 06:00 UTC every day
     - cron: '0 6 * * *'
