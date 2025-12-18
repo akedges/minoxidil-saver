@@ -1,8 +1,17 @@
 [
   {
     "id": "regaine_boots",
-    "price": 0.00,
-    "last_updated": "2024-01-01T00:00:00.000Z",
-    "status": "pending"
+    "price": null,
+    "status": "error"
+  },
+  {
+    "id": "sons_minox",
+    "price": null,
+    "status": "error"
+  },
+  {
+    "id": "kirkland_ebay_6_month",
+    "price": null,
+    "status": "error"
   }
 ]
