@@ -25,6 +25,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Add this step to ensure the Linux environment has the libraries Puppeteer needs
+      - name: Install Puppeteer System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgbm-dev
+
       - name: Run Scraper
         run: node scraper.js
 
