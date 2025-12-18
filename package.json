@@ -1,0 +1,12 @@
+{
+  "name": "minox-saver",
+  "version": "1.0.0",
+  "description": "Price scraper for Minoxidil",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  }
+}
